@@ -11,5 +11,4 @@ This project is about bikeshare analysis
 Files used are bikes.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://classroom.udacity.com/nanodegrees/nd104/

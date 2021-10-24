@@ -16,7 +16,6 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello, this is Mohga! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     
     
     while True:
@@ -31,7 +30,6 @@ def get_filters():
     
 
 
-    # TO DO: get user input for month (all, january, february, ... , june)
     while True:
       month = input("\nWhich Month would you like? January, February, March, April, May, June or type 'all' if you do not have any preference?\n")
       month=month.lower()
@@ -41,7 +39,7 @@ def get_filters():
       else:
         break
     month=month.capitalize()
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+
     while True:
       day = input("\nDo you want to look into a particular day? If so, choose between: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n")
       day=day.lower()
@@ -101,17 +99,14 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
     popular_month = df['month'].mode()[0]
     print('Most Common Month:', popular_month)
 
 
-    # TO DO: display the most common day of week
     popular_day = df['day_of_week'].mode()[0]
     print('Most Common day:', popular_day)
 
 
-    # TO DO: display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     popular_hour = df['hour'].mode()[0]
     print('Most Common Hour:', popular_hour)
@@ -128,7 +123,6 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
     Start_Station = df['Start Station'].value_counts().idxmax()
     print('Most Commonly used start station:', Start_Station)
 

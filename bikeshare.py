@@ -165,7 +165,6 @@ def user_stats(df):
     start_time = time.time()
 
     user_types = df['User Type'].value_counts()
-    #print(user_types)
     print('User Types:\n', user_types)
 
 
